@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Connector.CcvShop</id>
+    <version>$version$</version>
+    <title>API Connector for CCVShop</title>
+    <authors>Simply Translate, Dennis Rosenbaum</authors>
+    <owners>Dennis Rosenbaum</owners>
+    <licenseUrl>https://github.com/Simply-Translate/Connector-CCVShop/blob/master/LICENSE</licenseUrl>
+    <projectUrl>http://www.simplytranslate.nl/</projectUrl>
+    <iconUrl>https://avatars2.githubusercontent.com/u/16351110?v=3&s=200</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Library to create an api connection to the CCVShop.</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright &#x00A9; Simply Translate.  All rights reserved.</copyright>
+    <tags>api connector ccvshop webshop ecommerce e-commerce</tags>
+  </metadata>
+  <files>
+	<file src="bin\$configuration$\Connector.CcvShop.dll" target="lib\net40\" />
+  </files>
+</package>
