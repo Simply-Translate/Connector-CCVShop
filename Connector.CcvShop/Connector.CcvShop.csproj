@@ -64,9 +64,13 @@
     <Compile Include="Security\Hash.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="build.bat" />
-    <None Include="Connector.CcvShop.nuspec" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Connector.CcvShop.Interface\Connector.CcvShop.Interface.csproj">
+      <Project>{39ca951b-5a2b-47c6-aee2-3e227c2b8ba5}</Project>
+      <Name>Connector.CcvShop.Interface</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
