@@ -64,6 +64,8 @@
     <Compile Include="Security\Hash.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="build.bat" />
+    <None Include="Connector.CcvShop.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
