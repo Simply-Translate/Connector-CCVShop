@@ -16,7 +16,7 @@
     <tags>api connector ccvshop webshop ecommerce e-commerce</tags>
   </metadata>
   <files>
-	<file src="Connector.CcvShop\bin\$configuration$\Connector.CcvShop.dll" target="lib\net40\" />
 	<file src="Connector.CcvShop.Interface\bin\$configuration$\Connector.CcvShop.Interface.dll" target="lib\net40\" />
+	<file src="Connector.CcvShop\bin\$configuration$\Connector.CcvShop.dll" target="lib\net40\" />
   </files>
 </package>

@@ -52,8 +52,6 @@
     <Compile Include="ApiInstall.cs" />
     <Compile Include="AppInformation.cs" />
     <Compile Include="Error\ErrorLogger.cs" />
-    <Compile Include="Interface\IConnectionCcvShop.cs" />
-    <Compile Include="Interface\IConnectionCcvShopRepository.cs" />
     <Compile Include="Model\HandshakeModel.cs" />
     <Compile Include="Model\InstallModel.cs" />
     <Compile Include="Model\UninstallModel.cs" />
