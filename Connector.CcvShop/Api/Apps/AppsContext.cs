@@ -11,6 +11,7 @@ namespace Connector.CcvShop.Api.Apps
             var p = new ExecuteParams(connection)
             {
                 Uri = $"/api/rest/v1/apps/{AppInformation.Instance.AppId}",
+                Data = new { is_installed = true }
             };
             var result = await Patch(p);
             return result.Success;
