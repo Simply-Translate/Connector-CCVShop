@@ -52,77 +52,8 @@ namespace Connector.CcvShop
 
         public async Task<bool> VerifyInstall(IConnectionCcvShop connection)
         {
-            string apiPublic = connection.ApiPublic;
-            var sPublicKey = apiPublic;
-            var sSecretKey = connection.ApiSecret;
-            var sMethod = "PATCH";
-            var sUri = $"/api/rest/v1/apps/{AppInformation.Instance.AppId}";
-            var sApiRoot = connection.ApiRoot;
-            var requestUri = $"{sApiRoot}{sUri}";
-
-            var sTimeStamp = DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss+00:00");
-
-            var aData = new { is_installed = true };
-            var aDataJson = JsonConvert.SerializeObject(aData);
-            List<string> aDataToHash = new List<string>();
-            aDataToHash.Add(sPublicKey);
-            aDataToHash.Add(sMethod);
-            aDataToHash.Add(sUri);
-            aDataToHash.Add(aDataJson);
-            aDataToHash.Add(sTimeStamp);
-            var sStringToHash = string.Join("|", aDataToHash);
-            var sHash = Security.Encryption.ComputeHmacSha512(sSecretKey, sStringToHash);
-            sHash = sHash.ToLower();
-
-            using (var client = new HttpClient())
-            {
-                var method = new HttpMethod(sMethod);
-                client.DefaultRequestHeaders.Add("x-date", sTimeStamp);
-                client.DefaultRequestHeaders.Add("x-hash", sHash);
-                client.DefaultRequestHeaders.Add("x-public", sPublicKey);
-
-                client.DefaultRequestHeaders.TryAddWithoutValidation("Content-Type", "application/json; charset=UTF-8");
-
-                var request = new HttpRequestMessage(method, requestUri)
-                {
-                    Content = new StringContent(aDataJson)
-                };
-
-                HttpResponseMessage response = new HttpResponseMessage();
-                // In case you want to set a timeout
-                //CancellationToken cancellationToken = new CancellationTokenSource(60).Token;
-
-                response = client.SendAsync(request).Result;
-                bool success = response.IsSuccessStatusCode;
-                if (!success)
-                {
-                    string responseContent = await response.Content.ReadAsStringAsync();
-                    string errorMessage = GetErrorVerifyInstallResponseNoSuccess(sPublicKey, sSecretKey, sMethod, sUri, sApiRoot, requestUri, sTimeStamp, aDataJson, sStringToHash, sHash, responseContent);
-
-                    Error.ErrorLogger.ErrorOccurred(errorMessage);
-                }
-                return success;
-            }
-        }
-
-        private static string GetErrorVerifyInstallResponseNoSuccess(string sPublicKey, string sSecretKey, string sMethod, string sUri, string sApiRoot, string requestUri, string sTimeStamp, string aDataJson, string sStringToHash, string sHash, string responseContent)
-        {
-            return $@"Sending request to verify Install. This went totaly wrong!
-<br />
-<br /><b>Request:</b>
-<br />sPublicKey: {sPublicKey}
-<br />sSecretKey: {sSecretKey}
-<br />sMethod: {sMethod}
-<br />sUri: {sUri}
-<br />sApiRoot: {sApiRoot}
-<br />requestUri: {requestUri}
-<br />aDataJson: {aDataJson}
-<br />sTimeStamp: {sTimeStamp}
-<br />dataToHash: {sStringToHash}
-<br />hash: {sHash}
-<br />
-<br /><b>Response:</b>
-<br />{responseContent}";
+            Api.Apps.AppsContext apps = new Api.Apps.AppsContext();
+            return await apps.Verify(connection);
         }
 
         private static string GetErrorHandshakeHashNotOk(HandshakeModel model, string jsonData, string hash, string myHash)

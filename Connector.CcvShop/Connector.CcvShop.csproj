@@ -49,7 +49,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiContext.cs" />
     <Compile Include="ApiInstall.cs" />
+    <Compile Include="Api\Apps\AppsContext.cs" />
+    <Compile Include="Api\Base\ContextBase.cs" />
+    <Compile Include="Api\Execute\ExecuteParams.cs" />
+    <Compile Include="Api\Execute\ExecuteResult.cs" />
+    <Compile Include="Api\Execute\Methods.cs" />
+    <Compile Include="Api\Base\ParameterBase.cs" />
+    <Compile Include="Api\Base\ResultBase.cs" />
+    <Compile Include="Api\Base\MultipleResultBase.cs" />
+    <Compile Include="Api\Products\MultipleProductsResult.cs" />
+    <Compile Include="Api\Products\OrderBy.cs" />
+    <Compile Include="Api\Products\Parameters.cs" />
+    <Compile Include="Api\Products\Product.cs" />
+    <Compile Include="Api\Products\ProductContext.cs" />
     <Compile Include="AppInformation.cs" />
     <Compile Include="Error\ErrorLogger.cs" />
     <Compile Include="Model\HandshakeModel.cs" />
