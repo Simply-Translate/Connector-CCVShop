@@ -15,7 +15,7 @@ namespace Connector.CcvShop.Api.Products
             return await Get<ProductResult>(p);
         }
 
-        public async Task<MultipleProductsResult> Get(Parameters parameters, IConnectionCcvShop connection = null)
+        public async Task<MultipleProductsResult> Get(IConnectionCcvShop connection = null, Parameters parameters = null)
         {
             string uri = $"/api/rest/v1/products/";
             var p = new ExecuteParams(connection);
