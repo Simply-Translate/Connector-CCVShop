@@ -100,7 +100,7 @@ namespace Connector.CcvShop.Api.Products
         /// <summary>
         /// The quantity in stock for this product
         /// </summary>
-        public int stock { get; set; }
+        public int? stock { get; set; }
 
         /// <summary>
         /// The location of the product's stock, maxlength: 255
