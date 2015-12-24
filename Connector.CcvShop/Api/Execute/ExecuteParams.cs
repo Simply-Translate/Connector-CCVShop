@@ -9,6 +9,7 @@ namespace Connector.CcvShop.Api.Execute
         public IConnectionCcvShop Connection { get; internal set; }
         public string Uri { get; internal set; }
         public string Method { get; internal set; }
+        public string TargetLanguage { get; internal set; }
 
         public bool HasData => Data != null;
         private object _data;
@@ -34,7 +35,7 @@ namespace Connector.CcvShop.Api.Execute
                 Uri = $"{uri}?{parameters.ConstructQueryString()}";
         }
 
-        public ExecuteParams(IConnectionCcvShop connection)
+        public ExecuteParams(IConnectionCcvShop connection, string lan = null)
         {
             if (connection == null)
             {
@@ -43,6 +44,7 @@ namespace Connector.CcvShop.Api.Execute
                 throw new NotSupportedException(errorMessage);
             }
             Connection = connection;
+            TargetLanguage = lan;
         }
     }
 }

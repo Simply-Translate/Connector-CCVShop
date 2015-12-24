@@ -63,7 +63,7 @@ namespace Connector.CcvShop.Api.Base
         {
             var httpMethod = new HttpMethod(param.Method);
 
-            SetHeaders(param.Connection.ApiPublic, timeStamp, hash, client);
+            SetHeaders(param, timeStamp, hash, client);
 
             var request = new HttpRequestMessage(httpMethod, $"{param.Connection.ApiRoot}{param.Uri}");
             if (param.HasData)
@@ -71,8 +71,13 @@ namespace Connector.CcvShop.Api.Base
             return request;
         }
 
-        private static void SetHeaders(string publicKey, string timeStamp, string hash, HttpClient client)
+        private static void SetHeaders(ExecuteParams param, string timeStamp, string hash, HttpClient client)
         {
+            string publicKey = param.Connection.ApiPublic;
+
+            if (!string.IsNullOrEmpty(param.TargetLanguage))
+                client.DefaultRequestHeaders.TryAddWithoutValidation("Accept-Language", param.TargetLanguage);
+
             client.DefaultRequestHeaders.Add("x-date", timeStamp);
             client.DefaultRequestHeaders.Add("x-hash", hash);
             client.DefaultRequestHeaders.Add("x-public", publicKey);

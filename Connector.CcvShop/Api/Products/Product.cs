@@ -52,23 +52,27 @@ namespace Connector.CcvShop.Api.Products
 
         /// <summary>
         /// VAT rate of product in percentage, 0-100
+        /// Required
         /// </summary>
-        public double vatrate { get; set; }
+        public double? vatrate { get; set; }
 
         /// <summary>
         /// Original price of the product, before discounts, minimum: 0
+        /// Required
         /// </summary>
-        public double price { get; set; }
+        public double? price { get; set; }
 
         /// <summary>
         /// Discount on the product.Price - Discount = Sell price
+        /// Required
         /// </summary>
-        public double discount { get; set; }
+        public double? discount { get; set; }
 
         /// <summary>
         /// Purchase price ex.VAT off this product. Minimum: 0
+        /// Required
         /// </summary>
-        public double purchaseprice { get; set; }
+        public double? purchaseprice { get; set; }
 
         /// <summary>
         /// Custom creditpoints for this product
@@ -87,8 +91,9 @@ namespace Connector.CcvShop.Api.Products
 
         /// <summary>
         /// This product has stock
+        /// Required
         /// </summary>
-        public bool stockenabled { get; set; }
+        public bool? stockenabled { get; set; }
 
         /// <summary>
         /// If the stock amount is linked to the product of the attribute combination
@@ -109,8 +114,9 @@ namespace Connector.CcvShop.Api.Products
 
         /// <summary>
         /// Weight of the product in kilograms, minimum: 0
+        /// Required
         /// </summary>
-        public double weight { get; set; }
+        public double? weight { get; set; }
 
         /// <summary>
         /// The main categorie of this product.
@@ -147,13 +153,15 @@ namespace Connector.CcvShop.Api.Products
 
         /// <summary>
         /// Metatag robots: No-Index
+        /// Required
         /// </summary>
-        public bool no_index { get; set; }
+        public bool? no_index { get; set; }
 
         /// <summary>
         /// Metatag robots: No-Follow
+        /// Required
         /// </summary>
-        public bool no_follow { get; set; }
+        public bool? no_follow { get; set; }
 
         /// <summary>
         /// SEO Alias of this resource
@@ -172,13 +180,15 @@ namespace Connector.CcvShop.Api.Products
 
         /// <summary>
         /// Minimal order amount, min: 1
+        /// Required
         /// </summary>
-        public int minimal_order_amount { get; set; }
+        public int? minimal_order_amount { get; set; }
 
         /// <summary>
         /// Expected delivery time, number of days, weeks, months, quarters, years, value between: 1-31
+        /// Required
         /// </summary>
-        public int stock_delivery_number { get; set; }
+        public int? stock_delivery_number { get; set; }
 
         /// <summary>
         /// Expected delivery type
@@ -202,13 +212,15 @@ namespace Connector.CcvShop.Api.Products
 
         /// <summary>
         /// Show the product as a offer at the beginpage or offer element
+        /// Required
         /// </summary>
-        public bool show_on_beginpage { get; set; }
+        public bool? show_on_beginpage { get; set; }
 
         /// <summary>
         /// Show the product in the facebook shop when available
+        /// Required
         /// </summary>
-        public bool show_on_facebook { get; set; }
+        public bool? show_on_facebook { get; set; }
 
         /// <summary>
         /// Show order/offer button.
@@ -227,8 +239,9 @@ namespace Connector.CcvShop.Api.Products
         /// 2=Quick order,
         /// 3=Split layout,
         /// 4=Tab Layout
+        /// Required
         /// </summary>
-        public int product_layout { get; set; }
+        public int? product_layout { get; set; }
 
         /// <summary>
         /// The photo description size

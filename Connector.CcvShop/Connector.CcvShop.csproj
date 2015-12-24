@@ -65,6 +65,7 @@
     <Compile Include="Api\Products\Product.cs" />
     <Compile Include="Api\Products\ProductContext.cs" />
     <Compile Include="AppInformation.cs" />
+    <Compile Include="Core\Compare.cs" />
     <Compile Include="Error\ErrorLogger.cs" />
     <Compile Include="Model\HandshakeModel.cs" />
     <Compile Include="Model\InstallModel.cs" />
