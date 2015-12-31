@@ -1,5 +1,6 @@
 ﻿using Connector.CcvShop.Api.Execute;
 using Connector.CcvShop.Interface;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Connector.CcvShop.Api.Products
@@ -19,12 +20,26 @@ namespace Connector.CcvShop.Api.Products
 
         public async Task<MultipleProductsResult> Get(IConnectionCcvShop connection = null, Parameters parameters = null, string lan = null)
         {
+            //todo: add order by module
             //todo: add counter, max 150 per minute
 
-            string uri = $"/api/rest/v1/products/";
+            var uri = "/api/rest/v1/products/";
             var p = new ExecuteParams(connection, lan);
             p.SetUri(uri, parameters);
+
             return await Get<MultipleProductsResult>(p);
+        }
+
+        public async Task<List<MultipleProductsResult>> GetAll(IConnectionCcvShop connection = null, Parameters parameters = null, string lan = null)
+        {
+            //todo: add order by module
+            //todo: add counter, max 150 per minute
+
+            var uri = "/api/rest/v1/products/";
+            var p = new ExecuteParams(connection, lan);
+            p.SetUri(uri, parameters);
+
+            return await GetAll<MultipleProductsResult>(p);
         }
         
         public async Task<bool> Patch(IConnectionCcvShop connection, int id, ProductResult original, string lan = null)

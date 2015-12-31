@@ -3,7 +3,15 @@ using System.Collections.Generic;
 
 namespace Connector.CcvShop.Api.Base
 {
-    public class MultipleResultBase<T> : ResultBase
+    public class MultipleResultBase : ResultBase
+    {
+        /// <summary>
+        /// Link to the next set of the collection
+        /// </summary>
+        public Uri next { get; set; }
+    }
+
+    public class MultipleResultBase<T> : MultipleResultBase
     {
         /// <summary>
         /// Offset of the set, minimum: 0
@@ -24,12 +32,7 @@ namespace Connector.CcvShop.Api.Base
         /// Link to the previous set of the collection
         /// </summary>
         public Uri previous { get; set; }
-
-        /// <summary>
-        /// Link to the next set of the collection
-        /// </summary>
-        public Uri next { get; set; }
-
+        
         /// <summary>
         /// Array with collection items
         /// </summary>

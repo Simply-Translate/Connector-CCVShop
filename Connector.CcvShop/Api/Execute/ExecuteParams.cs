@@ -27,7 +27,7 @@ namespace Connector.CcvShop.Api.Execute
         private string _dataJson;
         public string DataJson => HasData ? _dataJson : string.Empty;
 
-        internal void SetUri(string uri, Base.ParameterBase parameters)
+        internal void SetUri(string uri, Base.ParameterBase parameters = null)
         {
             if (parameters == null)
                 Uri = uri;

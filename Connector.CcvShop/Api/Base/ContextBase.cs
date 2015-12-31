@@ -12,6 +12,21 @@ namespace Connector.CcvShop.Api.Base
         //TODO: Do something with the rate limit here
                 
         internal async Task<T> Get<T>(ExecuteParams param) => (await Get(param)).ConvertToData<T>();
+        internal async Task<List<T>> GetAll<T>(ExecuteParams param) where T : MultipleResultBase 
+        {
+            Uri uri = new Uri(param.Uri, UriKind.Relative);
+            List<T> resultList = new List<T>();
+            do
+            {
+                param.SetUri(uri.ToString());
+                var result = await Get(param);
+                var multipleResultBase = result.ConvertToData<MultipleResultBase>();
+                resultList.Add(result.ConvertToData<T>());
+                uri = multipleResultBase.next;
+            } while (uri != null);
+
+            return resultList;
+        }
 
         internal async Task<ExecuteResult> Get(ExecuteParams param)
         {

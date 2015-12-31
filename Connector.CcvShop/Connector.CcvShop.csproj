@@ -53,6 +53,9 @@
     <Compile Include="ApiInstall.cs" />
     <Compile Include="Api\Apps\AppsContext.cs" />
     <Compile Include="Api\Base\ContextBase.cs" />
+    <Compile Include="Api\Categories\CategoryResult.cs" />
+    <Compile Include="Api\Categories\MultipleCategoriesResult.cs" />
+    <Compile Include="Api\Categories\CategoryContext.cs" />
     <Compile Include="Api\Execute\ExecuteParams.cs" />
     <Compile Include="Api\Execute\ExecuteResult.cs" />
     <Compile Include="Api\Execute\Methods.cs" />
@@ -62,7 +65,7 @@
     <Compile Include="Api\Products\MultipleProductsResult.cs" />
     <Compile Include="Api\Products\OrderBy.cs" />
     <Compile Include="Api\Products\Parameters.cs" />
-    <Compile Include="Api\Products\Product.cs" />
+    <Compile Include="Api\Products\ProductResult.cs" />
     <Compile Include="Api\Products\ProductContext.cs" />
     <Compile Include="AppInformation.cs" />
     <Compile Include="Core\Compare.cs" />
