@@ -11,7 +11,7 @@ namespace Connector.CcvShop.Api.Categories
         /// Unique id of the resource
         /// Minimum: 0
         /// </summary>
-        public int? id { get; set; }
+        public int id { get; set; }
 
         /// <summary>
         /// <summary>
