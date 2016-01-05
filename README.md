@@ -1,7 +1,7 @@
 # Connector CCVShop
 .NET API connector for the CCVShop
 <br />CCVShop API documentation (https://www.ccvshop.nl/mogelijkheden/api)
-<br />Created by Simply Translate (http://www.simply-translate.nl/)
+<br />Created by Simply Translate (http://www.simplytranslate.nl/)
 <br />Created by Dennis Rosenbaum, any questions, please e-mail me at dennis.rosenbaum@outlook.com
 
 # Get Started
