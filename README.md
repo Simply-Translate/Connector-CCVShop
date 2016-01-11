@@ -1,6 +1,6 @@
-# Connector CCVShop
-.NET API connector for the CCVShop
-<br />CCVShop API documentation (https://www.ccvshop.nl/mogelijkheden/api)
+# Connector CCV Shop
+.NET API connector for the CCV Shop
+<br />CCV Shop API documentation (https://www.ccvshop.nl/mogelijkheden/api)
 <br />Created by Simply Translate (http://www.simplytranslate.nl/)
 <br />Created by Dennis Rosenbaum, any questions, please e-mail me at dennis.rosenbaum@outlook.com
 
@@ -25,12 +25,12 @@
   <br />
   <br /><img height="150" src="http://tool.simplytranslate.nl/Content/Images/OpenSource/CCVShopInitialize.png" />
   <br />
-  <br />Implement the urls that you also use within the CCVShop backend. <emp>Your website MUST be https in order for CCVShop to accept the requests.</emp>
-  <pre><code>info.HandshakeUrl = "[your CCVShop handshake url]";
-info.InstallUrl = "[your CCVShop install url]";
-info.UninstallUrl = "[your CCVShop uninstall url]";</code></pre>
+  <br />Implement the urls that you also use within the CCV Shop backend. <emp>Your website MUST be https in order for CCV Shop to accept the requests.</emp>
+  <pre><code>info.HandshakeUrl = "[your CCV Shop handshake url]";
+info.InstallUrl = "[your CCV Shop install url]";
+info.UninstallUrl = "[your CCV Shop uninstall url]";</code></pre>
 
-  <br />The AppId and SecretKey can also be found within the CCVShop backend. You can find this at the 'Developer App Center'.
+  <br />The AppId and SecretKey can also be found within the CCV Shop backend. You can find this at the 'Developer App Center'.
   <pre><code>info.AppId = "[your AppId]";
 info.SecretKey = "[your SecretKey]";</code></pre>
   
@@ -48,7 +48,7 @@ info.SecretKey = "[your SecretKey]";</code></pre>
 
 ## 1.1 Install/handshake process
 <p>
-  In order for the Connector to work, you must add some Handlers (Handshake, Uninstall, Install). Most of the handling can be done by the CCVShop Connector.
+  In order for the Connector to work, you must add some Handlers (Handshake, Uninstall, Install). Most of the handling can be done by the CCV Shop Connector.
   <br />
   <br /><b>Handshake</b></i>
   <pre><code>public ActionResult Handshake(Connector.CcvShop.Model.HandshakeModel model)
