@@ -7,7 +7,7 @@
     <authors>Simply Translate, Dennis Rosenbaum</authors>
     <owners>Dennis Rosenbaum</owners>
     <licenseUrl>https://github.com/Simply-Translate/Connector-CCVShop/blob/master/LICENSE</licenseUrl>
-    <projectUrl>http://www.simplytranslate.nl/</projectUrl>
+    <projectUrl>https://github.com/Simply-Translate/Connector-CCVShop/</projectUrl>
     <iconUrl>https://avatars2.githubusercontent.com/u/16351110?s=200</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Library to create an api connection to the CCVShop.</description>
