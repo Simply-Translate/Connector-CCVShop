@@ -3,14 +3,14 @@
   <metadata>
     <id>Connector.CcvShop</id>
     <version>$version$</version>
-    <title>API Connector for CCVShop</title>
+    <title>API Connector for CCV Shop</title>
     <authors>Simply Translate, Dennis Rosenbaum</authors>
     <owners>Dennis Rosenbaum</owners>
     <licenseUrl>https://github.com/Simply-Translate/Connector-CCVShop/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/Simply-Translate/Connector-CCVShop/</projectUrl>
     <iconUrl>https://avatars2.githubusercontent.com/u/16351110?s=200</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Library to create an api connection to the CCVShop.</description>
+    <description>Library to create an api connection to the CCV Shop.</description>
     <releaseNotes></releaseNotes>
     <copyright>Copyright &#x00A9; Simply Translate.  All rights reserved.</copyright>
     <tags>api connector ccvshop webshop ecommerce e-commerce</tags>
