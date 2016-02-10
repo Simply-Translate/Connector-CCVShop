@@ -22,11 +22,16 @@ namespace Connector.CcvShop.Api.Base
                 var result = await Get(param);
                 var multipleResultBase = result.ConvertToData<MultipleResultBase>();
                 resultList.Add(result.ConvertToData<T>());
-                var tempUri = multipleResultBase.next.ToString();
-                var index = tempUri.IndexOf("/api");
-                if (index == -1)
-                    break;
-                uri = new Uri(tempUri.Substring(index), UriKind.Relative);
+                var tempUri = multipleResultBase?.next?.ToString();
+                if (tempUri == null)
+                    uri = null;
+                else
+                { 
+                    var index = tempUri.IndexOf("/api");
+                    if (index == -1)
+                        break;
+                    uri = new Uri(tempUri.Substring(index), UriKind.Relative);
+                }
             } while (uri != null);
 
             return resultList;

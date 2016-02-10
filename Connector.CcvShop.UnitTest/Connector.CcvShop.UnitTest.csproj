@@ -55,6 +55,8 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Core\GetChangesTest.cs" />
+    <Compile Include="Mock\ConnectionCcvShop.cs" />
+    <Compile Include="Products\GetProductsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
