@@ -67,6 +67,11 @@
     <Compile Include="Api\Products\Parameters.cs" />
     <Compile Include="Api\Products\ProductResult.cs" />
     <Compile Include="Api\Products\ProductContext.cs" />
+    <Compile Include="Api\Webshops\MultipleWebshopsResult.cs" />
+    <Compile Include="Api\Webshops\WebshopResult.cs" />
+    <Compile Include="Api\Webshops\WebshopsContext.cs" />
+    <Compile Include="Api\Webshops\Settings\SettingsContext.cs" />
+    <Compile Include="Api\Webshops\Settings\SettingsResult.cs" />
     <Compile Include="AppInformation.cs" />
     <Compile Include="Core\Compare.cs" />
     <Compile Include="Error\ErrorLogger.cs" />
