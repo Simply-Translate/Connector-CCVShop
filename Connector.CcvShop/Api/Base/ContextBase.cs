@@ -114,7 +114,6 @@ namespace Connector.CcvShop.Api.Base
 <br />
 <br /><b>Request:</b>
 <br />PublicKey: {param.Connection.ApiPublic}
-<br />SecretKey: {param.Connection.ApiSecret}
 <br />Method: {param.Method}
 <br />Uri: {param.Uri}
 <br />ApiRoot: {param.Connection.ApiRoot}
